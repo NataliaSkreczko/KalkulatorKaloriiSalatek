@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+hej
+  <p>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="checkbox" name="tomatocheckbox" value="1"> Pomidor<br>
+      Masa składnika (w gramach):   
+      <input type="number" name="tomato" min="0" max="500"> <br>
+      Sałata <br>
+      Masa składnika (w gramach):
+      <input type="number" name="salad" min="0" max="500"><br>
+      Ogórek <br>
+      Masa składnika (w gramach):
+      <input type="number" name="pickle" min="0" max="500">
+      <input type="submit" value="Oblicz">
+    </form>
+  </p>
+
+  {% if result_present %}
+    <p><strong>Result:</strong>
+      <ul>
+        <p><font size="16">{{ error }}</font></p>
+        <li>Tomato<br>
+          {{ tomato }}</li>
+        <li>Salad<br>
+          {{ salad }}</li>
+        <li>Pickle<br>
+          {{ pickle }}</li>
+        <li>Łącznie<br>
+          {{ summary }}</li>
+        
+      </ul>
+    </p>
+
+  {% endif %}
+
+{% endblock %}
