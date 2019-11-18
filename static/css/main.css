@@ -1,11 +1,21 @@
 h1 {
-  color: #03ffff;
+  margin: 75px;
+  color: #08888;
 }
+
 
 body{
   background-image: url("/static/img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+p{
+  margin: 75px;
 }
 
+form{
+  margin-left: 75px;
+}
 input[type=file], select {
   width: 100%;
   padding: 12px 20px;
@@ -17,7 +27,7 @@ input[type=file], select {
 }
 
 input[type=submit] {
-  width: 100%;
+  width: 50%;
   background-color: #2f9500;
   color: white;
   padding: 14px 20px;
@@ -47,7 +57,7 @@ nav ul li {
 
 nav ul li a {
   display: block;
-  color: #666;
+  color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -70,7 +80,7 @@ tr:hover {background-color: #ddd;}
 th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
+  text-align: right;
   background-color: #002395;
   color: white;
 }

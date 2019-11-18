@@ -1,41 +1,161 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
 {% extends 'base.html' %}
-
 {% load static %}
-
 {% block content %}
-hej
+
+<h1><font face="Corsiva"><font color="white"><font size = "7">Oblicz kalorie</font></h1>
+
   <p>
+    <font face="Corsiva"><font color="white"><font size = "4">
+      Zaznacz użyty produkt, a następnie podaj jego masę w gramach.<br>
+      Wartości masy składnika w gramach muszą być mniejsze od 500.</font>
+
     <form method="post" enctype="multipart/form-data">
       {% csrf_token %}
-      <input type="checkbox" name="tomatocheckbox" value="1"> Pomidor<br>
-      Masa składnika (w gramach):   
+      <input type="checkbox" name="tomatocheckbox" value="1">
+      <font color="white"><font face="Cursive"><font size = "4">
+      Pomidor<br></font>
+      <font color="white"><font face="Corsiva"><font size = "4">
+      Masa składnika (w gramach): </font>
       <input type="number" name="tomato" min="0" max="500"> <br>
-      Sałata <br>
-      Masa składnika (w gramach):
+      <input type="checkbox" name="saladcheckbox" value="1">
+      <font color="white"><font face="Cursive"><font size = "4">
+      Sałata masłowa<br></font>
+      <font color="white"><font face="Corsiva"><font size = "4">
+      Masa składnika (w gramach):</font>
       <input type="number" name="salad" min="0" max="500"><br>
-      Ogórek <br>
-      Masa składnika (w gramach):
-      <input type="number" name="pickle" min="0" max="500">
+      <input type="checkbox" name="picklecheckbox" value="1">
+      <font color="white"><font face="Cursive"><font size = "4">
+      Ogórek konserwowy<br></font>
+      <font color="white"><font face="Corsiva"><font size = "4">
+      Masa składnika (w gramach):</font>
+      <input type="number" name="pickle" min="0" max="500"><br>
+      <input type="checkbox" name="romaine_lettucecheckbox" value="1">
+      <font color="white"><font face="Cursive"><font size = "4">
+      Sałata rzymska <br></font>
+      <font color="white"><font face="Corsiva"><font size = "4">
+      Masa składnika (w gramach):</font>
+      <input type="number" name="romaine_lettuce" min="0" max="500"><br>
+      <input type="checkbox" name="iceberg_lettucecheckbox" value="1">
+      <font color="white"><font face="Cursive"><font size = "4">
+      Sałata lodowa <br></font>
+      <font color="white"><font face="Corsiva"><font size = "4">
+      Masa składnika (w gramach):</font>
+      <input type="number" name="iceberg_lettuce" min="0" max="500"><br>
+      <input type="checkbox" name="chinese_cabbagecheckbox" value="1">
+      <font color="white"><font face="Cursive"><font size = "4">
+      Kapusta pekińska <br></font>
+      <font color="white"><font face="Corsiva"><font size = "4">
+      Masa składnika (w gramach):</font>
+      <input type="number" name="chinese_cabbage" min="0" max="500"><br>
+      <input type="checkbox" name="rucolacheckbox" value="1">
+      <font color="white"><font face="Cursive"><font size = "4">
+      Rukola <br></font>
+      <font color="white"><font face="Corsiva"><font size = "4">
+      Masa składnika (w gramach):</font>
+      <input type="number" name="rucola" min="0" max="500"><br>
+      <input type="checkbox" name="corn_saladcheckbox" value="1">
+      <font color="white"><font face="Cursive"><font size = "4">
+      Roszponka <br></font>
+      <font color="white"><font face="Corsiva"><font size = "4">
+      Masa składnika (w gramach):</font>
+      <input type="number" name="corn_salad" min="0" max="500"><br>
+      <input type="checkbox" name="raspberry_tomatocheckbox" value="1">
+      <font color="white"><font face="Cursive"><font size = "4">
+      Pomidor malinowy <br></font>
+      <font color="white"><font face="Corsiva"><font size = "4">
+      Masa składnika (w gramach):</font>
+      <input type="number" name="raspberry_tomato" min="0" max="500"><br>
+      <input type="checkbox" name="cherry_tomatocheckbox" value="1">
+      <font color="white"><font face="Cursive"><font size = "4">
+      Pomidorki koktajlowe <br></font>
+      <font color="white"><font face="Corsiva"><font size = "4">
+      Masa składnika (w gramach):</font>
+      <input type="number" name="cherry_tomato" min="0" max="500"><br>
+      <input type="checkbox" name="red_peppercheckbox" value="1">
+      <font color="white"><font face="Cursive"><font size = "4">
+      Papryka czerwona <br></font>
+      <font color="white"><font face="Corsiva"><font size = "4">
+      Masa składnika (w gramach):</font>
+      <input type="number" name="red_pepper" min="0" max="500"><br>
+      <input type="checkbox" name="yellow_peppercheckbox" value="1">
+      <font color="white"><font face="Cursive"><font size = "4">
+      Papryka żółta <br></font>
+      <font color="white"><font face="Corsiva"><font size = "4">
+      Masa składnika (w gramach):</font>
+      <input type="number" name="yellow_pepper" min="0" max="500"><br>
+      <input type="checkbox" name="green_peppercheckbox" value="1">
+      <font color="white"><font face="Cursive"><font size = "4">
+      Papryka zielona <br></font>
+      <font color="white"><font face="Corsiva"><font size = "4">
+      Masa składnika (w gramach):</font>
+      <input type="number" name="green_pepper" min="0" max="500"><br>
+      <input type="checkbox" name="carrotcheckbox" value="1">
+      <font color="white"><font face="Cursive"><font size = "4">
+      Marchewka<br></font>
+      <font color="white"><font face="Corsiva"><font size = "4">
+      Masa składnika (w gramach): </font>
+      <input type="number" name="carrot" min="0" max="500"> <br>
+      <input type="checkbox" name="parmesancheckbox" value="1">
+      <font color="white"><font face="Cursive"><font size = "4">
+      Parmezan<br></font>
+      <font color="white"><font face="Corsiva"><font size = "4">
+      Masa składnika (w gramach): </font>
+      <input type="number" name="parmesan" min="0" max="500"> <br>
+      <input type="checkbox" name="olivecheckbox" value="1">
+      <font color="white"><font face="Cursive"><font size = "4">
+      Oliwa<br></font>
+      <font color="white"><font face="Corsiva"><font size = "4">
+      Masa składnika (w gramach): </font>
+      <input type="number" name="olive" min="0" max="500"> <br>
       <input type="submit" value="Oblicz">
     </form>
   </p>
-
   {% if result_present %}
-    <p><strong>Result:</strong>
+    <p><font color="white"><font face="Cursive"><font size = "6"><strong>Wynik: {{ summary }} kcal</strong></font>
       <ul>
-        <p><font size="16">{{ error }}</font></p>
-        <li>Tomato<br>
-          {{ tomato }}</li>
-        <li>Salad<br>
-          {{ salad }}</li>
-        <li>Pickle<br>
-          {{ pickle }}</li>
+        <p><font color="white"><font face="Cursive"><font size = "4">{{ error }}</font></p>
+        <li>Pomidor<br>
+          {{ tomato }} kcal</li>
+        <li>Sałata masłowa<br>
+          {{ salad }} kcal</li>
+        <li>Sałata rzymska<br>
+          {{ romaine_lettuce }} kcal</li>
+        <li>Sałata lodowa<br>
+          {{ iceberg_lettuce }} kcal</li>
+        <li>Roszponka<br>
+          {{ corn_salad }} kcal</li>
+        <li>Rukola<br>
+          {{ rucola }} kcal</li>
+        <li>Ogórek konserwowy<br>
+          {{ pickle }} kcal</li>
+        <li>Kapusta pekińska<br>
+          {{ chinese_cabbage }} kcal</li>
+        <li>Pomidor malinowy<br>
+          {{ raspberry_tomato }} kcal</li>
+        <li>Pomidorki koktailowe<br>
+          {{ cherry_tomato }} kcal</li>
+        <li>Papryka czerwona<br>
+          {{ red_pepper }} kcal</li>
+        <li>Papryka żółta<br>
+          {{ yellow_pepper }} kcal</li>
+        <li>Papryka zielona<br>
+          {{ green_pepper }} kcal</li>
+        <li>Marchewka<br>
+          {{ carrot }} kcal</li>
+        <li>Parmezan<br>
+          {{ parmesan }} kcal</li>
+        <li>Oliwa<br>
+          {{ olive }} kcal</li>
         <li>Łącznie<br>
           {{ summary }}</li>
-        
       </ul>
-    </p>
-
+    </font></p>
   {% endif %}
-
 {% endblock %}
+  <body>
+</html>
